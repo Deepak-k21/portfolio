@@ -1,19 +1,19 @@
-declare module 'gsap-trial/SplitText' {
+declare module 'gsap/SplitText' {
   export const SplitText: any;
   export default SplitText;
 }
 
-declare module 'gsap-trial/ScrollSmoother' {
+declare module 'gsap/ScrollSmoother' {
   export const ScrollSmoother: any;
   export default ScrollSmoother;
 }
 
-declare module 'gsap-trial/DrawSVGPlugin' {
+declare module 'gsap/DrawSVGPlugin' {
   export const DrawSVGPlugin: any;
   export default DrawSVGPlugin;
 }
 
-declare module 'gsap-trial/ScrollToPlugin' {
+declare module 'gsap/ScrollToPlugin' {
   export const ScrollToPlugin: any;
   export default ScrollToPlugin;
 }
