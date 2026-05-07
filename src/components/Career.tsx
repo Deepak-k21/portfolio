@@ -15,43 +15,40 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Software Developer Intern</h4>
+                <h5>Encapsulation IT</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2024</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Developed backend systems using Java and contributed to the 
+              development of robust server-side applications.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>AI/ML Developer Intern</h4>
+                <h5>CODTECH</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2024</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Built AI-based applications and tools, focusing on machine learning 
+              models and intelligent system integration.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Full Stack Developer Intern</h4>
+                <h5>IHUB</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2024 - NOW</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Developing full-stack applications using the MERN stack and 
+              handling end-to-end debugging and deployment.
             </p>
           </div>
         </div>
