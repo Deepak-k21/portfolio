@@ -41,28 +41,31 @@ const setCharacter = (
                   const newMat = originalMat.clone();
                   mesh.material = newMat;
 
-                  // Customize colors to match Deepak's features
+                  const name = child.name.toLowerCase();
+                  console.log("Customizing 3D Mesh name:", child.name);
+
+                  // Customize colors to match Deepak's features (case-insensitive & robust to dot sanitization)
                   if (
-                    child.name === "Plane.007" || // Face skin
-                    child.name === "Neck" ||      // Neck skin
-                    child.name === "Ear.001" ||   // Ear skin
-                    child.name === "Hand"         // Hand skin
+                    name.includes("plane007") || name.includes("plane.007") || name.includes("plane_007") || // Face skin
+                    name.includes("neck") ||                                    // Neck skin
+                    name.includes("ear") ||                                     // Ear skin
+                    name.includes("hand")                                       // Hand skin
                   ) {
                     newMat.color.set("#ab7956"); // warm brown skin tone
                     newMat.roughness = 0.6;
-                  } else if (child.name === "hair") {
+                  } else if (name.includes("hair")) {
                     newMat.color.set("#050505"); // jet black hair
                     newMat.roughness = 0.85;
-                  } else if (child.name === "BODY.SHIRT") {
+                  } else if (name.includes("shirt")) {
                     newMat.color.set("#16161a"); // dark grey/black t-shirt
                     newMat.roughness = 0.7;
-                  } else if (child.name === "Pant") {
+                  } else if (name.includes("pant")) {
                     newMat.color.set("#22252a"); // dark pants
                     newMat.roughness = 0.8;
-                  } else if (child.name === "Shoe") {
+                  } else if (name.includes("shoe")) {
                     newMat.color.set("#f0f0f2"); // white sneakers
                     newMat.roughness = 0.5;
-                  } else if (child.name === "Sole") {
+                  } else if (name.includes("sole")) {
                     newMat.color.set("#111113"); // black sole
                   }
                 }
