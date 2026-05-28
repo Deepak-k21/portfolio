@@ -34,6 +34,38 @@ const setCharacter = (
                 child.castShadow = true;
                 child.receiveShadow = true;
                 mesh.frustumCulled = true;
+
+                // Clone the material so modifications only affect this mesh
+                if (mesh.material) {
+                  const originalMat = mesh.material as THREE.MeshStandardMaterial;
+                  const newMat = originalMat.clone();
+                  mesh.material = newMat;
+
+                  // Customize colors to match Deepak's features
+                  if (
+                    child.name === "Plane.007" || // Face skin
+                    child.name === "Neck" ||      // Neck skin
+                    child.name === "Ear.001" ||   // Ear skin
+                    child.name === "Hand"         // Hand skin
+                  ) {
+                    newMat.color.set("#ab7956"); // warm brown skin tone
+                    newMat.roughness = 0.6;
+                  } else if (child.name === "hair") {
+                    newMat.color.set("#050505"); // jet black hair
+                    newMat.roughness = 0.85;
+                  } else if (child.name === "BODY.SHIRT") {
+                    newMat.color.set("#16161a"); // dark grey/black t-shirt
+                    newMat.roughness = 0.7;
+                  } else if (child.name === "Pant") {
+                    newMat.color.set("#22252a"); // dark pants
+                    newMat.roughness = 0.8;
+                  } else if (child.name === "Shoe") {
+                    newMat.color.set("#f0f0f2"); // white sneakers
+                    newMat.roughness = 0.5;
+                  } else if (child.name === "Sole") {
+                    newMat.color.set("#111113"); // black sole
+                  }
+                }
               }
             });
             resolve(gltf);
